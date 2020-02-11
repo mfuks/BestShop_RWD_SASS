@@ -1,0 +1,97 @@
+/* section 2 - banner */
+.banner
+{
+  height: calc(100vh - 208px); /* 100vh - header h - margin-top h*/
+  width: 100%;
+  background: url('../image/Background.png') bottom no-repeat;
+  background-size: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  a, .banner-text, .banner-button{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+  }
+
+  .banner-text,
+  {
+    width: 100%;
+    font-family: $font-aside;
+    margin: 1.3rem auto 2.4rem auto;
+    padding: 0 70px 0 70px;
+
+
+    p{
+      text-align: center;
+    }
+  }
+
+}
+
+h1
+{
+  font-family: $font-main;
+  font-size: 3rem;
+  font-weight: 400;
+
+  a
+  {
+    color: $color-deep-dark;
+    text-decoration: none;
+    text-align: center;
+  }
+}
+
+.banner-button-1
+{
+  height: 4.2rem;
+
+  background-color: $color-primary;
+  border-radius: calc(4.2rem / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  a
+  {
+    font-family: $font-aside;
+    color: $color-deep-light;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 720px)
+{
+
+  .banner
+  {
+    margin: 180px 0 0 0;
+
+    .banner-button-1 {
+
+      width: 80%;
+    }
+
+
+  }
+}
+
+
+@media (min-width: 721px)
+{
+
+  .banner
+  {
+    margin: 138px 0 0 0;
+  }
+
+  .banner-button-1
+  {
+    width: 27.5rem;
+  }
+
+}
