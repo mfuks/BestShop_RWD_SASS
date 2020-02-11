@@ -1,13 +1,15 @@
 # BestShop 
-## website template
+RWD Workshop - landing page website template
 
 ### Technologies:
 
 - HTML5
-- Sass
+- SASS
 - Gulp
 - RWD
 - Media Queries
 - JavaScript
 
+### Preview:
 
+https://mfuks.github.io/BestShop_RWD_SASS/
