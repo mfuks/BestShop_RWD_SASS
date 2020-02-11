@@ -1,4 +1,4 @@
-/* section 2 - banner */
+//section 2 - banner
 .banner
 {
   height: calc(100vh - 208px); /* 100vh - header h - margin-top h*/
@@ -13,7 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-
   }
 
   .banner-text,
