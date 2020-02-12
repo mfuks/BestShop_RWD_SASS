@@ -1,0 +1,116 @@
+// section 3 - popularPlatform
+.platform
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 120px;
+
+  .platform-header
+  {
+    font-family: $font-main;
+    font-size: 2.3rem;
+    color: $color-deep-dark;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 0;
+  }
+
+  .platform-info
+  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .platform-info-elements
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .platform-info-elements-text
+    {
+      height: 5.6rem;
+      width: 11rem;
+      font-family: $font-main;
+      text-align: center;
+      padding: 10px 25px;
+    }
+    .platform-info-elements-img
+    {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 4.8rem;
+      width: 11rem;
+      position: relative;
+      left: 10%;
+      z-index: 1;
+    }
+
+    .platform-info p:not(.paragraph-bold)
+    {
+      color: $color-aside-light
+    }
+
+    .paragraph-bold
+    {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: $color-deep-dark;
+      letter-spacing: 0.3rem;
+      padding-bottom: 10px;
+    }
+
+    @mixin dot
+    {
+      content: "";
+      display: block;
+      height: 63px;
+      width: 63px;
+      border-radius: 50%;
+      position: absolute;
+      top: 5%;
+      left: 30%;
+    }
+
+    .dot1::before
+    {
+      @include dot;
+      background-color: $color-secondary;
+    }
+
+    .dot2::before
+    {
+      @include dot;
+      background-color: $color-primary;
+    }
+
+    .dot3::before
+    {
+      @include dot;
+      background-color: $color-tertiary;
+    }
+  }
+
+}
+
+
+@media (max-width: 375px)
+{
+
+  .platform-info
+  {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+  }
+
+}

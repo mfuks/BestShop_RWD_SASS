@@ -59,7 +59,6 @@ h2 {
   color: #000;
   padding-bottom: 30px; }
 
-/* section 1 - header */
 header {
   height: 70px;
   width: 100%;
@@ -139,9 +138,8 @@ header {
         border-bottom: 5px solid #08A6E4;
         padding-bottom: 22.5px; } }
 
-/* section 2 - banner */
 .banner {
-  height: calc(100vh - 208px);
+  height: calc(100vh - 137px);
   /* 100vh - header h - margin-top h*/
   width: 100%;
   background: url("../image/Background.png") bottom no-repeat;
@@ -194,3 +192,89 @@ h1 {
     margin: 138px 0 0 0; }
   .banner-button-1 {
     width: 27.5rem; } }
+
+.platform {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 120px; }
+  .platform .platform-header {
+    font-family: "Raleway", sans-serif;
+    font-size: 2.3rem;
+    color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 100px 0; }
+  .platform .platform-info {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; }
+  .platform .platform-info-elements {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .platform .platform-info-elements .platform-info-elements-text {
+      height: 5.6rem;
+      width: 11rem;
+      font-family: "Raleway", sans-serif;
+      text-align: center;
+      padding: 10px 25px; }
+    .platform .platform-info-elements .platform-info-elements-img {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 4.8rem;
+      width: 11rem;
+      position: relative;
+      left: 10%;
+      z-index: 1; }
+    .platform .platform-info-elements .platform-info p:not(.paragraph-bold) {
+      color: #A5A5A5; }
+    .platform .platform-info-elements .paragraph-bold {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #000;
+      letter-spacing: 0.3rem;
+      padding-bottom: 10px; }
+    .platform .platform-info-elements .dot1::before {
+      content: "";
+      display: block;
+      height: 63px;
+      width: 63px;
+      border-radius: 50%;
+      position: absolute;
+      top: 5%;
+      left: 30%;
+      background-color: #FB3B64; }
+    .platform .platform-info-elements .dot2::before {
+      content: "";
+      display: block;
+      height: 63px;
+      width: 63px;
+      border-radius: 50%;
+      position: absolute;
+      top: 5%;
+      left: 30%;
+      background-color: #08A6E4; }
+    .platform .platform-info-elements .dot3::before {
+      content: "";
+      display: block;
+      height: 63px;
+      width: 63px;
+      border-radius: 50%;
+      position: absolute;
+      top: 5%;
+      left: 30%;
+      background-color: #55DFB4; }
+
+@media (max-width: 375px) {
+  .platform-info {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column; } }
