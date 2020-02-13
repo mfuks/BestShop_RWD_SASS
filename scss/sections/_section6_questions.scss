@@ -1,0 +1,146 @@
+//section 6 - questions
+.questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .questions-box
+  {
+    display: flex;
+    margin: auto;
+
+    p
+    {
+      font-family: $font-aside;
+      padding: 20px 0;
+    }
+
+    .questions-box-left,
+    .questions-box-right
+    {
+      flex: 1 1 0;
+      padding: 0 25px 50px 25px;
+    }
+
+    .questions-box-left
+    {
+
+      .questions-box-left-contact
+      {
+        display: flex;
+        flex-wrap: wrap;
+
+        div
+        {
+          display: flex;
+        }
+
+        p
+        {
+          font-family: $font-aside;
+          font-size: 1rem;
+          color: $color-aside-dark;
+          padding: 20px 30px 20px 10px;
+        }
+      }
+    }
+
+    .questions-box-right-form
+    {
+      position: relative;
+
+      .questions-box-right-form-input
+      {
+        font-family: $font-aside;
+        font-size: 0.7rem;
+        font-weight: 700;
+        width: 100%;
+        display: flex;
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid $color-aside-light;
+      }
+
+      .questions-box-right-form-label
+      {
+        font-family: $font-aside;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        color: $color-primary;
+      }
+
+      label:last-of-type
+      {
+        display: flex;
+        font-family: $font-aside;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        color: $color-aside-light;
+        margin-left: 20px;
+      }
+
+      label:last-of-type::before  // new checkbox
+      {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        border: 1px solid $color-aside-semi-dark;
+        border-radius: 4px;
+        position: absolute;
+        left: 0;
+      }
+
+      label:last-of-type::after
+      {
+        content: "";
+        display: block;
+        background: url("../image/Checkmark.svg") center/cover;
+        width: 15px;
+        height: 15px;
+        margin: 5px;
+        position: absolute;
+        top: 130px;
+        left: 0;
+      }
+
+      .questions-box-right-form-checkbox
+      {
+        visibility: hidden;
+      }
+
+      button
+      {
+        font-family: $font-aside;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: $color-deep-light;
+        padding: 20px 95px;
+        background-color: $color-primary;
+        border-radius: 30px;
+        position: absolute;
+        top: 300px;
+        right: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .questions-box
+  {
+    flex-direction: column;
+    width: 95%;
+    padding: 15px 0 50px 0;
+  }
+}
+
+@media (min-width: 801px) {
+  .questions-box
+  {
+    width: 80%;
+    padding-bottom: 130px;
+  }
+}
