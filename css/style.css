@@ -64,6 +64,9 @@ h1 {
   font-size: 3rem;
   font-weight: 400; }
 
+a {
+  text-decoration: none; }
+
 @media (max-width: 800px) {
   h1 {
     font-size: 2.5rem; }
@@ -282,12 +285,14 @@ h1 a {
 
 @media (max-width: 400px) {
   .platform {
-    padding-bottom: 50px; }
+    padding-bottom: 20px; }
     .platform .platform-info {
       display: flex;
       justify-content: center;
       align-content: center;
       flex-direction: column; }
+      .platform .platform-info .platform-info-elements {
+        padding-bottom: 30px; }
     .platform .platform-header {
       padding: 50px 30px; } }
 
@@ -298,8 +303,6 @@ h1 a {
   align-items: center; }
   .benefits p {
     font-family: "Open Sans", sans-serif; }
-  .benefits .container {
-    margin: 45px 0; }
   .benefits .benefits-first {
     background-color: #fff;
     display: flex;
@@ -382,65 +385,69 @@ h1 a {
       align-items: flex-end; }
 
 @media (max-width: 800px) {
-  .benefits-first,
-  .benefits-second,
-  .benefits-third {
-    margin: 0 30px;
+  .benefits .container {
+    margin-top: 30px; }
+  .benefits .benefits-first,
+  .benefits .benefits-second,
+  .benefits .benefits-third {
+    margin: 0 30px 30px 30px;
     border: 1px solid #E8E9ED;
     border-radius: 5px; }
-  .benefits-first {
+  .benefits .benefits-first {
     flex-direction: column-reverse; }
-    .benefits-first .benefits-first-img {
+    .benefits .benefits-first .benefits-first-img {
       height: 230px; }
-      .benefits-first .benefits-first-img .benefits-first-img-box {
+      .benefits .benefits-first .benefits-first-img .benefits-first-img-box {
         width: 254px; }
-        .benefits-first .benefits-first-img .benefits-first-img-box img {
+        .benefits .benefits-first .benefits-first-img .benefits-first-img-box img {
           margin-top: 55px;
           height: 9rem; }
-      .benefits-first .benefits-first-img .benefits-first-img-box::before {
+      .benefits .benefits-first .benefits-first-img .benefits-first-img-box::before {
         width: 100px;
         height: 100px;
         right: -5px;
         top: 25px; }
-  .benefits-first-text,
-  .benefits-second-text,
-  .benefits-third-left,
-  .benefits-third-right {
+  .benefits .benefits-first-text,
+  .benefits .benefits-second-text,
+  .benefits .benefits-third-left,
+  .benefits .benefits-third-right {
     height: 230px;
     width: 100%;
     padding: 0 40px 0 40px; }
-    .benefits-first-text p,
-    .benefits-second-text p,
-    .benefits-third-left p,
-    .benefits-third-right p {
+    .benefits .benefits-first-text p,
+    .benefits .benefits-second-text p,
+    .benefits .benefits-third-left p,
+    .benefits .benefits-third-right p {
       border-bottom: none;
       padding-bottom: 0;
       font-size: 0.87rem;
       line-height: 1.2rem; }
-  .benefits-third-left,
-  .benefits-third-right {
+  .benefits .benefits-third-left,
+  .benefits .benefits-third-right {
     height: 250px; }
-  .benefits-second {
+  .benefits .benefits-second {
     flex-direction: column; }
-    .benefits-second .benefits-second-img {
+    .benefits .benefits-second .benefits-second-img {
       height: 230px; }
-      .benefits-second .benefits-second-img img {
+      .benefits .benefits-second .benefits-second-img img {
         height: 8.5rem; }
-      .benefits-second .benefits-second-img .benefits-second-img-box::before {
+      .benefits .benefits-second .benefits-second-img .benefits-second-img-box::before {
         width: 130px;
         height: 130px; }
-  .benefits-third {
+  .benefits .benefits-third {
     flex-direction: column; }
-    .benefits-third .benefits-third-right {
+    .benefits .benefits-third .benefits-third-right {
       border-bottom-left-radius: 5px;
       border-bottom-right-radius: 5px;
       border-bottom: 1px solid #E8E9ED;
       border-right: 1px solid #E8E9ED;
       border-left: 1px solid #E8E9ED; }
-      .benefits-third .benefits-third-right img {
+      .benefits .benefits-third .benefits-third-right img {
         height: 11rem; } }
 
 @media (min-width: 801px) {
+  .benefits .container {
+    margin-top: 50px; }
   .benefits p {
     padding-bottom: 35px;
     font-size: 1rem;
@@ -495,3 +502,129 @@ h1 a {
     margin-left: 37px; }
     .benefits-third .benefits-third-right img {
       height: 16rem; } }
+
+/* section 5 - prices*/
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .pricing h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center; }
+  .pricing h3 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    color: #000;
+    text-align: center; }
+  .pricing p {
+    text-align: center; }
+  .pricing a, .pricing button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    position: relative;
+    top: 25px; }
+  .pricing h2 {
+    padding-top: 50px; }
+  .pricing ul {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    text-align: center;
+    list-style-image: url("../image/Ckechmark-1.svg");
+    list-style-position: inside;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .pricing p:not(.packages-price) {
+    font-family: "Raleway", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #000; }
+  .pricing .pricing-packages {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap; }
+    .pricing .pricing-packages .pricing-packages-basic,
+    .pricing .pricing-packages .pricing-packages-professional,
+    .pricing .pricing-packages .pricing-packages-premium {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center; }
+    .pricing .pricing-packages .pricing-packages-price {
+      font-family: "Open Sans", sans-serif;
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 15px; }
+    .pricing .pricing-packages .pricing-package {
+      border-radius: 18px;
+      position: relative; }
+    .pricing .pricing-packages .pricing-packages-basic li:last-child,
+    .pricing .pricing-packages .pricing-packages-basic li:nth-last-child(2),
+    .pricing .pricing-packages .pricing-packages-professional li:last-child {
+      list-style-image: url("../image/Close.svg"); }
+    .pricing .pricing-packages .pricing-packages-basic {
+      border: 2px solid #FB3B64; }
+      .pricing .pricing-packages .pricing-packages-basic .pricing-packages-price {
+        color: #FB3B64; }
+      .pricing .pricing-packages .pricing-packages-basic a {
+        background-color: #FB3B64; }
+    .pricing .pricing-packages .pricing-packages-professional {
+      border: 2px solid #08A6E4;
+      box-shadow: 0 0 30px rgba(8, 166, 228, 0.5); }
+      .pricing .pricing-packages .pricing-packages-professional .pricing-packages-price {
+        color: #08A6E4; }
+      .pricing .pricing-packages .pricing-packages-professional a {
+        background-color: #08A6E4;
+        box-shadow: 0 5px 15px rgba(8, 166, 228, 0.5); }
+    .pricing .pricing-packages .pricing-packages-premium {
+      border: 2px solid #55DFB4; }
+      .pricing .pricing-packages .pricing-packages-premium .pricing-packages-price {
+        color: #55DFB4; }
+      .pricing .pricing-packages .pricing-packages-premium a {
+        background-color: #55DFB4; }
+
+@media (max-width: 800px) {
+  .pricing {
+    padding-bottom: 0; }
+    .pricing h2 {
+      padding-bottom: 30px; }
+    .pricing .pricing-packages-boxes {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    .pricing .pricing-package {
+      height: 100%;
+      width: 80%;
+      padding-top: 0;
+      margin-bottom: 50px; }
+    .pricing .pricing-packages-professional {
+      height: 100%;
+      width: 90%; } }
+
+@media (min-width: 801px) {
+  .pricing {
+    padding-bottom: 95px; }
+    .pricing h2 {
+      padding-bottom: 50px; }
+    .pricing .pricing-package {
+      height: 460px;
+      width: 370px;
+      padding-top: 40px;
+      margin: 10px 10px 50px 10px; }
+    .pricing .pricing-packages-professional {
+      height: 500px;
+      width: 405px; } }

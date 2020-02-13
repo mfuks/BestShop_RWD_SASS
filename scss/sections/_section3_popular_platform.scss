@@ -105,7 +105,7 @@
 {
   .platform
   {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
 
     .platform-info
     {
@@ -113,12 +113,19 @@
       justify-content: center;
       align-content: center;
       flex-direction: column;
+
+      .platform-info-elements
+      {
+        padding-bottom: 30px;
+      }
     }
 
     .platform-header
     {
       padding: 50px 30px;
     }
+
+
   }
 
 

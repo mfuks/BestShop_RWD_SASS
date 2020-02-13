@@ -1,0 +1,217 @@
+/* section 5 - prices*/
+.pricing
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+
+  h3
+  {
+    font-family: $font-main;
+    font-weight: 700;
+    color: $color-deep-dark;
+    text-align: center;
+  }
+
+  p
+  {
+    text-align: center;
+  }
+
+  a, button
+  {
+    font-family: $font-aside;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: $color-deep-light;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 150px;
+    border-radius: 25px;
+    position: relative;
+    top: 25px;
+  }
+
+  h2 {
+    padding-top: 50px;
+  }
+
+  ul
+  {
+    font-family: $font-aside;
+    font-size: 0.9rem;
+    text-align: center;
+    list-style-image: url("../image/Ckechmark-1.svg");
+    list-style-position: inside;
+    padding-bottom: 30px;
+    padding-top: 50px;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  p:not(.packages-price)
+  {
+    font-family: $font-main;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: $color-deep-dark;
+  }
+
+  .pricing-packages
+  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .pricing-packages-basic,
+    .pricing-packages-professional,
+    .pricing-packages-premium
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .pricing-packages-price
+    {
+      font-family: $font-aside;
+      font-size: 3rem;
+      font-weight: 300;
+      padding: 15px;
+    }
+
+    .pricing-package
+    {
+      border-radius: 18px;
+      position: relative;
+    }
+
+    .pricing-packages-basic li:last-child,
+    .pricing-packages-basic li:nth-last-child(2),
+    .pricing-packages-professional li:last-child
+    {
+      list-style-image: url("../image/Close.svg");
+    }
+
+    .pricing-packages-basic
+    {
+      border: 2px solid $color-secondary;
+
+      .pricing-packages-price
+      {
+        color: $color-secondary;
+      }
+
+      a
+      {
+        background-color: $color-secondary;
+      }
+    }
+
+    .pricing-packages-professional
+    {
+      border: 2px solid $color-primary;
+      box-shadow: 0 0 30px rgba($color-primary, .5);
+
+      .pricing-packages-price
+      {
+        color: $color-primary;
+      }
+
+      a{
+        background-color: $color-primary;
+        box-shadow: 0 5px 15px rgba($color-primary, .5);
+      }
+    }
+
+    .pricing-packages-premium
+    {
+      border: 2px solid $color-tertiary;
+
+      .pricing-packages-price
+      {
+        color: $color-tertiary;
+      }
+
+      a
+      {
+        background-color: $color-tertiary;
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 800px) {
+
+  .pricing {
+    padding-bottom: 0;
+
+    h2 {
+      padding-bottom: 30px;
+    }
+
+    .pricing-packages-boxes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pricing-package {
+      height: 100%;
+      width: 80%;
+      padding-top: 0;
+      margin-bottom: 50px;
+    }
+
+    .pricing-packages-professional {
+      height: 100%;
+      width: 90%;
+    }
+  }
+
+}
+
+
+
+
+
+
+@media (min-width: 801px) {
+
+  .pricing {
+    padding-bottom: 95px;
+
+    h2 {
+      padding-bottom: 50px;
+    }
+
+    .pricing-package {
+      height: 460px;
+      width: 370px;
+      padding-top: 40px;
+      margin: 10px 10px 50px 10px;
+    }
+
+    .pricing-packages-professional {
+      height: 500px;
+      width: 405px;
+    }
+
+  }
+}
