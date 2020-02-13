@@ -1,4 +1,17 @@
 // section 3 - popularPlatform
+
+@mixin dot
+{
+  content: "";
+  display: block;
+  height: 63px;
+  width: 63px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5%;
+  left: 30%;
+}
+
 .platform
 {
   display: flex;
@@ -9,13 +22,12 @@
   .platform-header
   {
     font-family: $font-main;
-    font-size: 2.3rem;
     color: $color-deep-dark;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding: 100px 0;
+    padding: 100px 30px;
   }
 
   .platform-info
@@ -68,18 +80,6 @@
       padding-bottom: 10px;
     }
 
-    @mixin dot
-    {
-      content: "";
-      display: block;
-      height: 63px;
-      width: 63px;
-      border-radius: 50%;
-      position: absolute;
-      top: 5%;
-      left: 30%;
-    }
-
     .dot1::before
     {
       @include dot;
@@ -101,16 +101,25 @@
 
 }
 
-
-@media (max-width: 375px)
+@media (max-width: 400px)
 {
-
-  .platform-info
+  .platform
   {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
+    padding-bottom: 50px;
+
+    .platform-info
+    {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+    }
+
+    .platform-header
+    {
+      padding: 50px 30px;
+    }
   }
+
 
 }

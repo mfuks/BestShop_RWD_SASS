@@ -7,11 +7,10 @@ header
   justify-content: center;
   align-items: center;
   background-color: $color-deep-light;
-  box-shadow: 0 3px 10px rgba($color-deep-light, 1),
-              0 3px 6px rgba($color-deep-dark, .9);
+  box-shadow: 0 3px 6px rgba($color-deep-dark, .3);
   position: fixed;
   top: 0;
-  z-index: 3;
+  z-index: 2;
 
   .container
   {
@@ -70,17 +69,17 @@ header
   display: none;
 }
 
-@media (max-width: 720px)
+@media (max-width: 800px)
 {
 
   .header-menu
   {
     display: none;
     position: absolute;
-    top: 110px;
+    top: 100px;
     left: 0;
     width: 100%;
-    box-shadow: 0 6px 6px rgba($color-deep-dark, .3);
+    box-shadow: 0 3px 6px rgba($color-deep-dark, .3);
 
     ul
     {
@@ -93,7 +92,6 @@ header
       padding: 20px 0 20px 0;
       background: $color-deep-light;
 
-
       li
       {
         padding: 10px 0 10px 50px;
@@ -103,7 +101,7 @@ header
   }
 }
 
-@media (min-width: 721px) {
+@media (min-width: 801px) {
   .header-menu-open-icon,
   .header-menu-close-icon {
     display: none;
@@ -129,6 +127,5 @@ header
 
     }
   }
-
 
 }

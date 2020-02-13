@@ -1,0 +1,361 @@
+// section 4 - benefits
+
+@mixin first-second
+{
+  background-color: $color-deep-light;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 37px;
+  position: relative;
+}
+
+.benefits
+{
+  background-color: $color-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p
+  {
+    font-family: $font-aside;
+  }
+
+  .container
+  {
+    margin: 45px 0;
+  }
+
+  @mixin benefits-img
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .benefits-first
+  {
+   @include first-second;
+
+    .benefits-first-text
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .benefits-first-img
+    {
+      @include benefits-img;
+      width: 50%;
+      z-index: 1;
+
+      .benefits-first-img-box
+      {
+        position: relative;
+      }
+
+      .benefits-first-img-box::before
+      {
+        content: "";
+        display: block;
+        background-color: $color-secondary;
+        border-radius: 40px;
+        position: absolute;
+        transform: rotate(45deg);
+        z-index: -1;
+      }
+    }
+  }
+
+  .benefits-second
+  {
+    @include first-second;
+
+    .benefits-second-text
+    {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      p
+      {
+        font-family: $font-aside;
+      }
+    }
+
+    .benefits-second-img
+    {
+      @include benefits-img;
+      z-index: 1;
+
+      .benefits-second-img-box
+      {
+        position: relative;
+      }
+
+      .benefits-second-img-box::before
+      {
+        content: "";
+        display: block;
+        background-color: $color-primary;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+
+  .benefits-third
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 95px;
+    position: relative;
+
+    .benefits-third-left
+    {
+      background-color: $color-deep-light;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+
+      .benefits-third-left-text
+      {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+
+        p
+        {
+          font-family: $font-aside;
+        }
+      }
+    }
+
+    .benefits-third-right
+    {
+      background-color: $color-tertiary;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 800px) {
+
+  @mixin height {
+    height: 230px;
+  }
+
+  .benefits-first,
+  .benefits-second,
+  .benefits-third {
+    margin: 0 30px;
+    border: 1px solid $color-aside-deep-light;
+    border-radius: 5px;
+  }
+
+  .benefits-first {
+    flex-direction: column-reverse;
+
+    .benefits-first-img {
+      @include height;
+
+      .benefits-first-img-box {
+        width: 254px;
+
+        img {
+          margin-top: 55px;
+          height: 9rem;
+        }
+      }
+
+      .benefits-first-img-box::before {
+        width: 100px;
+        height: 100px;
+        right: -5px;
+        top: 25px;
+      }
+    }
+  }
+
+  .benefits-first-text,
+  .benefits-second-text,
+  .benefits-third-left,
+  .benefits-third-right{
+    @include height;
+    width: 100%;
+    padding: 0 40px 0 40px;
+
+    p {
+      border-bottom: none;
+      padding-bottom: 0;
+      font-size: 0.87rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  .benefits-third-left,
+  .benefits-third-right{
+    height: 250px;
+  }
+
+  .benefits-second {
+    flex-direction: column;
+
+    .benefits-second-img {
+      @include height;
+
+      img {
+        height: 8.5rem;
+      }
+
+      .benefits-second-img-box::before {
+        width: 130px;
+        height: 130px;
+      }
+    }
+  }
+
+  .benefits-third {
+    flex-direction: column;
+
+    .benefits-third-right
+    {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border-bottom: 1px solid $color-aside-deep-light;
+      border-right: 1px solid $color-aside-deep-light;
+      border-left: 1px solid $color-aside-deep-light;
+
+      img
+      {
+        height: 11rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 801px) {
+
+  @mixin height {
+    height: 370px;
+  }
+
+  .benefits {
+
+    p {
+      padding-bottom: 35px;
+      font-size: 1rem;
+      line-height: 1.4rem;
+    }
+
+    .benefits-first {
+
+      .benefits-first-text {
+        @include height;
+        max-width: 50%;
+        min-width: 20%;
+        padding: 0 90px 0 50px;
+
+        p {
+          border-bottom: 5px solid $color-secondary;
+        }
+      }
+
+      .benefits-first-img {
+        @include height;
+
+        .benefits-first-img-box {
+          width: 368px;
+          right: 30px;
+
+          img {
+            margin: 80px 0 0 0;
+            height: 13rem;
+          }
+        }
+
+        .benefits-first-img-box::before {
+          width: 200px;
+          height: 200px;
+          right: -5px;
+          top: 35px;
+        }
+      }
+    }
+
+    .benefits-second {
+
+      .benefits-second-text {
+        @include height;
+        max-width: 50%;
+        padding: 0 50px 0 90px;
+
+        p {
+          border-bottom: 5px solid $color-primary;
+        }
+      }
+
+      .benefits-second-img {
+        @include height;
+
+        .benefits-second-img-box {
+          width: 367px;
+
+          img {
+            height: 20rem;
+          }
+        }
+
+        .benefits-second-img-box::before {
+          width: 320px;
+          height: 320px;
+          left: 120px;
+        }
+      }
+    }
+  }
+
+  .benefits-third
+  {
+    .benefits-third-left
+    {
+      @include height;
+      flex-grow: 2;
+
+      .benefits-third-left-text
+      {
+        padding: 0 120px 0 50px;
+
+        p {
+          border-bottom: 5px solid $color-tertiary;
+        }
+      }
+    }
+
+    .benefits-third-right {
+      @include height;
+      flex-grow: 1;
+      padding: 30px 30px 0 0;
+      margin-left: 37px;
+
+      img
+      {
+        height: 16rem;
+      }
+    }
+  }
+}
+

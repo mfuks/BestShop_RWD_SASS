@@ -18,3 +18,25 @@ h2
   color: $color-deep-dark;
   padding-bottom: 30px;
 }
+h1
+{
+  font-family: $font-main;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+
+@media (max-width: 800px)
+{
+
+  h1
+  {
+    font-size: 2.5rem;
+  }
+
+  h2
+  {
+    font-size: 2rem;
+  }
+
+}

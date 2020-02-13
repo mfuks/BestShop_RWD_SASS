@@ -1,6 +1,6 @@
 $(function () {
 
-    const $width = window.matchMedia('(max-width: 720px)');
+    const $width = window.matchMedia('(max-width: 800px)');
     showMenu($width);
     $width.addListener(showMenu);
 

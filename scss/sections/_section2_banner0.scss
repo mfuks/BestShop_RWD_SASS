@@ -4,7 +4,7 @@
   height: calc(100vh - 137px); /* 100vh - header h - margin-top h*/
   width: 100%;
   background: url('../image/Background.png') bottom no-repeat;
-  background-size: 1000px;
+  background-size: 100vw;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -32,10 +32,6 @@
 
 h1
 {
-  font-family: $font-main;
-  font-size: 3rem;
-  font-weight: 400;
-
   a
   {
     color: $color-deep-dark;
@@ -69,6 +65,7 @@ h1
   .banner
   {
     margin: 180px 0 0 0;
+    background-size: 1000px;
 
     .banner-button-1 {
 
@@ -85,6 +82,7 @@ h1
   .banner
   {
     margin: 138px 0 0 0;
+    height: calc(100vh - 237px);
   }
 
   .banner-button-1
