@@ -10,6 +10,13 @@ RWD Workshop - landing page website template
 - Media Queries
 - JavaScript
 
-### Preview:
+### Desktop Demo
 
+![](demo/desktop-demo.gif)
+
+### Mobile Demo
+
+![](demo/mobile-demo.gif)
+
+### Preview:
 https://mfuks.github.io/BestShop_RWD_SASS/
