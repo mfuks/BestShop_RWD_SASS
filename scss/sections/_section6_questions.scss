@@ -48,6 +48,8 @@
     .questions-box-right-form
     {
       position: relative;
+      display: flex;
+      flex-direction: column;
 
       .questions-box-right-form-input
       {
@@ -87,7 +89,7 @@
         display: block;
         width: 24px;
         height: 24px;
-        border: 1px solid $color-aside-semi-dark;
+        border: 1px solid $color-aside-dark;
         border-radius: 4px;
         position: absolute;
         left: 0;
@@ -102,7 +104,7 @@
         height: 15px;
         margin: 5px;
         position: absolute;
-        top: 130px;
+        top: 120px;
         left: 0;
       }
 
@@ -120,9 +122,8 @@
         padding: 20px 95px;
         background-color: $color-primary;
         border-radius: 30px;
-        position: absolute;
-        top: 300px;
-        right: 0;
+        align-self: flex-end;
+        margin-top: 20px;
       }
     }
   }
@@ -133,7 +134,7 @@
   {
     flex-direction: column;
     width: 95%;
-    padding: 15px 0 50px 0;
+    padding-top: 15px;
   }
 }
 
@@ -141,6 +142,5 @@
   .questions-box
   {
     width: 80%;
-    padding-bottom: 130px;
   }
 }

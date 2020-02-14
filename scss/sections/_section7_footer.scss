@@ -1,0 +1,49 @@
+//section 7 - footer
+.footer
+{
+  height: 90px;
+  background-color: $color-deep-light;
+  box-shadow: 0 -5px 40px rgba($color-deep-dark, .3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .footer-box {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .footer-box-left > p {
+      font-family: $font-aside;
+      font-size: 0.7rem;
+      color: $color-aside-semi-dark;
+    }
+
+    .footer-box-left {
+      .footer-box-left-logo {
+        font-size: 1.6rem;
+        padding-bottom: 5px;
+      }
+    }
+
+    .footer-box-right {
+
+      img {
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .footer-box {
+    width: 90%;
+  }
+}
+
+@media (min-width: 801px) {
+  .footer-box {
+    width: 80%;
+  }
+}

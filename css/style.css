@@ -67,6 +67,12 @@ h1 {
 a {
   text-decoration: none; }
 
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #08A6E4; }
+
 @media (max-width: 800px) {
   h1 {
     font-size: 2.5rem; }
@@ -89,12 +95,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 50px; }
-
-.header-logo {
-  font-family: "Raleway", sans-serif;
-  font-size: 2rem;
-  font-weight: 300;
-  color: #08A6E4; }
 
 .header-menu-icon i {
   color: #08A6E4; }
@@ -653,7 +653,9 @@ h1 a {
         color: #707070;
         padding: 20px 30px 20px 10px; }
     .questions .questions-box .questions-box-right-form {
-      position: relative; }
+      position: relative;
+      display: flex;
+      flex-direction: column; }
       .questions .questions-box .questions-box-right-form .questions-box-right-form-input {
         font-family: "Open Sans", sans-serif;
         font-size: 0.7rem;
@@ -682,7 +684,7 @@ h1 a {
         display: block;
         width: 24px;
         height: 24px;
-        border: 1px solid #95989A;
+        border: 1px solid #707070;
         border-radius: 4px;
         position: absolute;
         left: 0; }
@@ -694,7 +696,7 @@ h1 a {
         height: 15px;
         margin: 5px;
         position: absolute;
-        top: 130px;
+        top: 120px;
         left: 0; }
       .questions .questions-box .questions-box-right-form .questions-box-right-form-checkbox {
         visibility: hidden; }
@@ -706,17 +708,45 @@ h1 a {
         padding: 20px 95px;
         background-color: #08A6E4;
         border-radius: 30px;
-        position: absolute;
-        top: 300px;
-        right: 0; }
+        align-self: flex-end;
+        margin-top: 20px; }
 
 @media (max-width: 800px) {
   .questions-box {
     flex-direction: column;
     width: 95%;
-    padding: 15px 0 50px 0; } }
+    padding-top: 15px; } }
 
 @media (min-width: 801px) {
   .questions-box {
-    width: 80%;
-    padding-bottom: 130px; } }
+    width: 80%; } }
+
+.footer {
+  height: 90px;
+  background-color: #fff;
+  box-shadow: 0 -5px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .footer .footer-box {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .footer .footer-box .footer-box-left > p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 0.7rem;
+      color: #95989A; }
+    .footer .footer-box .footer-box-left .footer-box-left-logo {
+      font-size: 1.6rem;
+      padding-bottom: 5px; }
+    .footer .footer-box .footer-box-right img {
+      padding-left: 20px; }
+
+@media (max-width: 800px) {
+  .footer-box {
+    width: 90%; } }
+
+@media (min-width: 801px) {
+  .footer-box {
+    width: 80%; } }
