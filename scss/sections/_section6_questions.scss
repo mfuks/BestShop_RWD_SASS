@@ -1,5 +1,6 @@
 //section 6 - questions
-.questions {
+.questions
+{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -129,7 +130,9 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px)
+{
+
   .questions-box
   {
     flex-direction: column;
@@ -138,7 +141,9 @@
   }
 }
 
-@media (min-width: 801px) {
+@media (min-width: 801px)
+{
+
   .questions-box
   {
     width: 80%;

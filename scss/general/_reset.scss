@@ -41,14 +41,20 @@ blockquote, q
 
 blockquote
 {
-  &:before, &:after {
+
+  &:before,
+  &:after
+  {
     content: '';
   }
 }
 
 q
 {
-  &:before, &:after {
+
+  &:before,
+  &:after
+  {
     content: '';
   }
 }
@@ -64,7 +70,8 @@ a
   text-decoration: none;
 }
 
-textarea:focus, input:focus
+textarea:focus,
+input:focus
 {
   outline-offset: 0;
   outline: none;

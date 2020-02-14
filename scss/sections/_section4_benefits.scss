@@ -1,5 +1,4 @@
 //section 4 - benefits
-
 @mixin first-second
 {
   background-color: $color-deep-light;
@@ -144,9 +143,6 @@
   }
 }
 
-
-
-
 @media (max-width: 800px) {
 
   @mixin height {
@@ -160,30 +156,27 @@
       margin-top: 30px;
     }
 
-    .benefits-first,
-    .benefits-second,
-    .benefits-third {
-      margin: 0 30px 30px 30px;
-      border: 1px solid $color-aside-deep-light;
-      border-radius: 5px;
-    }
-
-    .benefits-first {
+    .benefits-first
+    {
       flex-direction: column-reverse;
 
-      .benefits-first-img {
+      .benefits-first-img
+      {
         @include height;
 
-        .benefits-first-img-box {
+        .benefits-first-img-box
+        {
           width: 254px;
 
-          img {
+          img
+          {
             margin-top: 55px;
             height: 9rem;
           }
         }
 
-        .benefits-first-img-box::before {
+        .benefits-first-img-box::before
+        {
           width: 100px;
           height: 100px;
           right: -5px;
@@ -192,15 +185,26 @@
       }
     }
 
+    .benefits-first,
+    .benefits-second,
+    .benefits-third
+    {
+      margin: 0 30px 30px 30px;
+      border: 1px solid $color-aside-deep-light;
+      border-radius: 5px;
+    }
+
     .benefits-first-text,
     .benefits-second-text,
     .benefits-third-left,
-    .benefits-third-right{
+    .benefits-third-right
+    {
       @include height;
       width: 100%;
       padding: 0 40px 0 40px;
 
-      p {
+      p
+      {
         border-bottom: none;
         padding-bottom: 0;
         font-size: 0.87rem;
@@ -209,28 +213,33 @@
     }
 
     .benefits-third-left,
-    .benefits-third-right{
+    .benefits-third-right
+    {
       height: 250px;
     }
 
     .benefits-second {
       flex-direction: column;
 
-      .benefits-second-img {
+      .benefits-second-img
+      {
         @include height;
 
-        img {
+        img
+        {
           height: 8.5rem;
         }
 
-        .benefits-second-img-box::before {
+        .benefits-second-img-box::before
+        {
           width: 130px;
           height: 130px;
         }
       }
     }
 
-    .benefits-third {
+    .benefits-third
+    {
       flex-direction: column;
 
       .benefits-third-right
@@ -248,56 +257,83 @@
       }
     }
   }
-
-
 }
 
-@media (min-width: 801px) {
+@media (min-width: 801px)
+{
 
-  @mixin height {
+  @mixin height
+  {
     height: 370px;
   }
 
-  .benefits {
+  .benefits
+  {
 
     .container
     {
       margin-top: 50px;
     }
 
-    p {
+    p
+    {
       padding-bottom: 35px;
       font-size: 1rem;
       line-height: 1.4rem;
     }
 
-    .benefits-first {
+    .benefits-first,
+    .benefits-second,
+    .benefits-third-right,
+    .benefits-third-left
+    {
+      border: 1px solid $color-aside-deep-light;
+      border-radius: 5px;
+    }
 
-      .benefits-first-text {
+    .benefits-first,
+    .benefits-second,
+    .benefits-third
+    {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .benefits-first
+    {
+
+      .benefits-first-text
+      {
         @include height;
         max-width: 50%;
         min-width: 20%;
         padding: 0 90px 0 50px;
 
-        p {
+        p
+        {
           border-bottom: 5px solid $color-secondary;
         }
       }
 
-      .benefits-first-img {
+      .benefits-first-img
+      {
         @include height;
 
-        .benefits-first-img-box {
+        .benefits-first-img-box
+        {
           width: 368px;
           right: 30px;
 
-          img {
+          img
+          {
             margin: 80px 0 0 0;
             height: 13rem;
           }
         }
 
-        .benefits-first-img-box::before {
+        .benefits-first-img-box::before
+        {
           width: 200px;
           height: 200px;
           right: -5px;
@@ -306,30 +342,37 @@
       }
     }
 
-    .benefits-second {
+    .benefits-second
+    {
 
-      .benefits-second-text {
+      .benefits-second-text
+      {
         @include height;
         max-width: 50%;
         padding: 0 50px 0 90px;
 
-        p {
+        p
+        {
           border-bottom: 5px solid $color-primary;
         }
       }
 
-      .benefits-second-img {
+      .benefits-second-img
+      {
         @include height;
 
-        .benefits-second-img-box {
+        .benefits-second-img-box
+        {
           width: 367px;
 
-          img {
+          img
+          {
             height: 20rem;
           }
         }
 
-        .benefits-second-img-box::before {
+        .benefits-second-img-box::before
+        {
           width: 320px;
           height: 320px;
           left: 120px;
@@ -349,13 +392,15 @@
       {
         padding: 0 120px 0 50px;
 
-        p {
+        p
+        {
           border-bottom: 5px solid $color-tertiary;
         }
       }
     }
 
-    .benefits-third-right {
+    .benefits-third-right
+    {
       @include height;
       flex-grow: 1;
       padding: 30px 30px 0 0;

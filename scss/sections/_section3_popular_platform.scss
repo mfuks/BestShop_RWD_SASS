@@ -44,6 +44,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    margin: 0 20px;
 
     .platform-info-elements-text
     {
@@ -97,7 +98,6 @@
       background-color: $color-tertiary;
     }
   }
-
 }
 
 @media (max-width: 400px)
@@ -123,9 +123,5 @@
     {
       padding: 50px 30px;
     }
-
-
   }
-
-
 }

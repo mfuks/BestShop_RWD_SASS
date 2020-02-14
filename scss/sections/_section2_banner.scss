@@ -1,7 +1,7 @@
 //section 2 - banner
 .banner
 {
-  height: calc(100vh - 137px); /* 100vh - header h - margin-top h*/
+  height: calc(100vh - 180px);
   width: 100%;
   background: url('../image/Background.png') bottom no-repeat;
   background-size: 100vw;
@@ -9,25 +9,25 @@
   justify-content: center;
   align-items: flex-start;
 
-  a, .banner-text, .banner-button{
+  a, .banner-text, .banner-button
+  {
     display: flex;
     justify-content: center;
     align-items: flex-start;
   }
 
-  .banner-text,
+  .banner-text
   {
     width: 100%;
     font-family: $font-aside;
     margin: 1.3rem auto 2.4rem auto;
     padding: 0 70px 0 70px;
 
-
-    p{
+    p
+    {
       text-align: center;
     }
   }
-
 }
 
 h1
@@ -43,7 +43,6 @@ h1
 .banner-button-1
 {
   height: 4.2rem;
-
   background-color: $color-primary;
   border-radius: calc(4.2rem / 2);
   display: flex;
@@ -67,11 +66,10 @@ h1
     margin: 180px 0 0 0;
     background-size: 1000px;
 
-    .banner-button-1 {
-
+    .banner-button-1
+    {
       width: 80%;
     }
-
   }
 }
 
@@ -82,12 +80,11 @@ h1
   .banner
   {
     margin: 138px 0 0 0;
-    height: calc(100vh - 237px);
+    height: calc(100vh - 137px);
   }
 
   .banner-button-1
   {
     width: 27.5rem;
   }
-
 }

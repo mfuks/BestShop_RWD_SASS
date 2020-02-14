@@ -40,7 +40,8 @@ table {
 a {
   text-decoration: none; }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline-offset: 0;
   outline: none; }
 
@@ -153,8 +154,7 @@ header {
         padding-bottom: 22.5px; } }
 
 .banner {
-  height: calc(100vh - 137px);
-  /* 100vh - header h - margin-top h*/
+  height: calc(100vh - 180px);
   width: 100%;
   background: url("../image/Background.png") bottom no-repeat;
   background-size: 100vw;
@@ -201,7 +201,7 @@ h1 a {
 @media (min-width: 721px) {
   .banner {
     margin: 138px 0 0 0;
-    height: calc(100vh - 237px); }
+    height: calc(100vh - 137px); }
   .banner-button-1 {
     width: 27.5rem; } }
 
@@ -228,7 +228,8 @@ h1 a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative; }
+    position: relative;
+    margin: 0 20px; }
     .platform .platform-info-elements .platform-info-elements-text {
       height: 5.6rem;
       width: 11rem;
@@ -387,12 +388,6 @@ h1 a {
 @media (max-width: 800px) {
   .benefits .container {
     margin-top: 30px; }
-  .benefits .benefits-first,
-  .benefits .benefits-second,
-  .benefits .benefits-third {
-    margin: 0 30px 30px 30px;
-    border: 1px solid #E8E9ED;
-    border-radius: 5px; }
   .benefits .benefits-first {
     flex-direction: column-reverse; }
     .benefits .benefits-first .benefits-first-img {
@@ -407,6 +402,12 @@ h1 a {
         height: 100px;
         right: -5px;
         top: 25px; }
+  .benefits .benefits-first,
+  .benefits .benefits-second,
+  .benefits .benefits-third {
+    margin: 0 30px 30px 30px;
+    border: 1px solid #E8E9ED;
+    border-radius: 5px; }
   .benefits .benefits-first-text,
   .benefits .benefits-second-text,
   .benefits .benefits-third-left,
@@ -452,6 +453,18 @@ h1 a {
     padding-bottom: 35px;
     font-size: 1rem;
     line-height: 1.4rem; }
+  .benefits .benefits-first,
+  .benefits .benefits-second,
+  .benefits .benefits-third-right,
+  .benefits .benefits-third-left {
+    border: 1px solid #E8E9ED;
+    border-radius: 5px; }
+  .benefits .benefits-first,
+  .benefits .benefits-second,
+  .benefits .benefits-third {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto; }
   .benefits .benefits-first .benefits-first-text {
     height: 370px;
     max-width: 50%;
@@ -510,7 +523,8 @@ h1 a {
   .pricing h2 {
     text-align: center;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    padding-top: 50px; }
   .pricing h3 {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -532,8 +546,6 @@ h1 a {
     border-radius: 25px;
     position: relative;
     top: 25px; }
-  .pricing h2 {
-    padding-top: 50px; }
   .pricing ul {
     font-family: "Open Sans", sans-serif;
     font-size: 0.9rem;
