@@ -688,29 +688,28 @@ h1 a {
         font-family: "Open Sans", sans-serif;
         font-size: 0.75rem;
         line-height: 1rem;
-        color: #A5A5A5;
-        margin-left: 20px; }
-      .questions .questions-box .questions-box-right-form label:last-of-type::before {
+        color: #A5A5A5; }
+      .questions .questions-box .questions-box-right-form .questions-box-right-form-checkbox {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         content: "";
         display: block;
         width: 24px;
         height: 24px;
         border: 1px solid #707070;
         border-radius: 4px;
-        position: absolute;
-        left: 0; }
-      .questions .questions-box .questions-box-right-form label:last-of-type::after {
+        padding: 12px;
+        margin-right: 5px;
+        position: relative; }
+      .questions .questions-box .questions-box-right-form .questions-box-right-form-checkbox:checked:after {
         content: "";
-        display: block;
-        background: url("../image/Checkmark.svg") center/cover;
         width: 15px;
         height: 15px;
-        margin: 5px;
         position: absolute;
-        top: 120px;
-        left: 0; }
-      .questions .questions-box .questions-box-right-form .questions-box-right-form-checkbox {
-        visibility: hidden; }
+        top: 20%;
+        right: 20%;
+        background: url("../image/Checkmark.svg") center/cover; }
       .questions .questions-box .questions-box-right-form button {
         font-family: "Open Sans", sans-serif;
         font-size: 0.8rem;

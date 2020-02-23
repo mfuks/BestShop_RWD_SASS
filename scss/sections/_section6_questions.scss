@@ -81,37 +81,34 @@
         font-size: 0.75rem;
         line-height: 1rem;
         color: $color-aside-light;
-        margin-left: 20px;
+
       }
 
-      label:last-of-type::before  // new checkbox
+      .questions-box-right-form-checkbox
       {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
         content: "";
         display: block;
         width: 24px;
         height: 24px;
         border: 1px solid $color-aside-dark;
         border-radius: 4px;
-        position: absolute;
-        left: 0;
+        padding: 12px;
+        margin-right: 5px;
+        position: relative;
       }
 
-      label:last-of-type::after
+      .questions-box-right-form-checkbox:checked:after
       {
         content: "";
-        display: block;
-        background: url("../image/Checkmark.svg") center/cover;
         width: 15px;
         height: 15px;
-        margin: 5px;
         position: absolute;
-        top: 120px;
-        left: 0;
-      }
-
-      .questions-box-right-form-checkbox
-      {
-        visibility: hidden;
+        top: 20%;
+        right: 20%;
+        background: url("../image/Checkmark.svg") center/cover;
       }
 
       button
