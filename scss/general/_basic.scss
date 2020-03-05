@@ -39,6 +39,35 @@ a
   color: $color-primary;
 }
 
+.checkbox
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid $color-aside-dark;
+  border-radius: 4px;
+  padding: 12px;
+  margin-right: 5px;
+  position: relative;
+}
+
+.checkbox:checked:after
+{
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  background: url("../image/Checkmark.svg") center/cover;
+}
+
+
+
 @media (max-width: 800px)
 {
 

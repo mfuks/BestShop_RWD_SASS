@@ -1,0 +1,259 @@
+//section 6b - calculator
+
+@mixin font-component
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: $color-deep-light;
+  font-family: $font-aside;
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba($color-deep-dark, 0.29)
+}
+
+.calculator
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator-boxes,
+{
+  width: 100%;
+
+  h2
+  {
+    text-align: center;
+    margin: 15px auto;
+    width: 90%;
+  }
+
+  .calculator-boxes-box {
+    width: 100%;
+    display: flex;
+    margin-bottom: 40px;
+
+    .calculator-boxes-box-right
+    {
+      margin: 10px;
+
+      form
+      {
+        display: flex;
+        flex-direction: column;
+
+        label
+        {
+          display: flex;
+          align-items: center;
+          margin-bottom: 20px;
+          font-size: 0.8rem;
+          font-family: $font-aside;
+          color: $color-aside-dark;
+
+          input[type="number"], select
+          {
+            width: 100%;
+            height: 40px;
+            box-shadow: 0 3px 6px rgba($color-primary, 0.29);
+            border: 1px solid $color-primary;
+            border-radius: 6px;
+            padding: 10px 20px;
+            font-size: 0.8rem;
+            color: $color-aside-dark;
+            background: $color-deep-light;
+            box-sizing: border-box;
+
+            cursor: pointer;
+          }
+
+          select{
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: none;
+            z-index: 2;
+
+            &::-ms-expand {
+              display: none;
+            }
+
+            &:focus
+            {
+              outline: none;
+            }
+          }
+        }
+
+        .select::before
+        {
+          content: "";
+          display: block;
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          background: url("../image/ArrowDown.svg") no-repeat center/cover;
+          transform: rotate(180deg);
+
+        }
+
+        .checkbox
+        {
+          display: inline-block;
+        }
+
+      }
+    }
+
+    .calculator-boxes-box-left
+    {
+      margin: 10px;
+
+      .calculator-boxes-box-left-components
+      {
+        display: flex;
+        flex-direction: column;
+
+        .component
+        {
+          @include font-component;
+          width: 100%;
+          height: 31px;
+          background: $color-tertiary;
+          margin-bottom: 10px;
+
+          span:last-child
+          {
+            font-size: 1.1rem;
+          }
+        }
+
+        span:last-child
+        {
+          font-weight: 600;
+        }
+
+        .calculator-boxes-box-left-components-total
+        {
+          @include font-component;
+          width: 50%;
+          height: 38px;
+          background: $color-primary;
+          align-self: flex-end;
+          margin-top: 10px;
+
+          span:last-child
+          {
+            font-size: 1.25rem;
+          }
+        }
+      }
+
+
+    }
+  }
+
+
+}
+
+
+
+
+
+@media (max-width: 800px)
+{
+
+  .calculator-boxes-box
+  {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+
+    .calculator-boxes-box-left,
+    .calculator-boxes-box-right
+    {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 90%;
+      height: 50%;
+
+
+      .calculator-boxes-box-left-components
+      {
+        width: 100%;
+      }
+    }
+
+    form
+    {
+      width: 100%;
+
+      label
+      {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .select::before
+      {
+        right: 7%;
+      }
+    }
+  }
+
+}
+
+@media (min-width: 801px)
+{
+  .calculator-boxes-box
+  {
+    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
+
+    .calculator-boxes-box-left,
+    .calculator-boxes-box-right
+    {
+      width: 45%;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 0 auto;
+
+      .calculator-boxes-box-left-components
+      {
+        width: 80%;
+        height: 100%;
+
+      }
+    }
+
+    form
+    {
+      width: 80%;
+      align-items: flex-start;
+      justify-content: center;
+
+
+      label
+      {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .select::before
+      {
+        left: 39%;
+      }
+    }
+  }
+}
