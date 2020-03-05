@@ -3,6 +3,11 @@ html
   font-size: 16px;
 }
 
+button
+{
+  cursor: pointer;
+}
+
 .container
 {
   width: 1352px;
@@ -53,6 +58,7 @@ a
   padding: 12px;
   margin-right: 5px;
   position: relative;
+  cursor: pointer;
 }
 
 .checkbox:checked:after

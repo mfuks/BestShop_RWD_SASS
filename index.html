@@ -46,8 +46,8 @@
             <div class="banner-text">
                 <p>Open shop on our platform and increase your sales</p>
             </div>
-            <section class="banner-button">
-                <section class="banner-button-1">
+            <section class="banner-btn">
+                <section class="banner-btn-1">
                     <a href="#">Open your shop</a>
                 </section>
             </section>
@@ -227,7 +227,7 @@
     <div class="container">
         <div class="questions-box">
             <div class="questions-box-left">
-                <h1>Any questions?</h1>
+                <h2>Any questions?</h2>
                 <p>Leave your email address or call us!</p>
                 <div class="questions-box-left-contact">
                     <div>
@@ -278,14 +278,17 @@
                         <label>
                             <input type="number" placeholder="Estimated orders in month">
                         </label>
-                        <label class="select">
-                            <select>
-                                <option value="">Choose package</option>
-                                <option value="basic">Basic</option>
-                                <option value="professional">Professional</option>
-                                <option value="premium">Premium</option>
-                            </select>
-                        </label>
+
+                        <div class="calculator-boxes-box-right-dropdown">
+                            <span class="calculator-boxes-box-right-dropdown-span">Choose package</span>
+                            <button class="calculator-boxes-box-right-dropdown-btn rotate-btn"></button>
+                            <ul class="calculator-boxes-box-right-dropdown-list">
+                                <li>Basic</li>
+                                <li>Professional</li>
+                                <li>Premium</li>
+                            </ul>
+                        </div>
+
                         <label>
                             <input type="checkbox" class="checkbox" checked>
                             Accounting
@@ -296,6 +299,7 @@
                         </label>
                     </form>
                 </div>
+
                 <div class="calculator-boxes-box-left">
                     <div class="calculator-boxes-box-left-components">
                         <div class="products component">
@@ -357,5 +361,6 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="js/app.js"></script>
+<script src="js/calculator.js"></script>
 </body>
 </html>

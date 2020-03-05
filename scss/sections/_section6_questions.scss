@@ -25,6 +25,10 @@
 
     .questions-box-left
     {
+      h2
+      {
+        padding-bottom: 5px;
+      }
 
       .questions-box-left-contact
       {
@@ -35,6 +39,8 @@
         {
           display: flex;
         }
+
+
 
         p
         {
@@ -109,6 +115,12 @@
     flex-direction: column;
     width: 95%;
     padding-top: 15px;
+
+    h2,
+    p
+    {
+      text-align: center;
+    }
   }
 }
 

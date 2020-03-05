@@ -37,132 +37,162 @@
     width: 100%;
     display: flex;
     margin-bottom: 40px;
+  }
+}
 
-    .calculator-boxes-box-right
+.calculator-boxes-box-right
+{
+  margin: 10px;
+
+  form
+  {
+    display: flex;
+    flex-direction: column;
+
+    label
     {
-      margin: 10px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      font-size: 0.8rem;
+      font-family: $font-aside;
+      color: $color-aside-dark;
 
-      form
+      input[type="number"]
       {
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        height: 40px;
+        box-shadow: 0 3px 6px rgba($color-primary, 0.29);
+        border: 1px solid $color-primary;
+        border-radius: 6px;
+        padding: 10px 20px;
+        font-size: 0.8rem;
+        color: $color-aside-dark;
+        background: $color-deep-light;
+        box-sizing: border-box;
 
-        label
-        {
-          display: flex;
-          align-items: center;
-          margin-bottom: 20px;
-          font-size: 0.8rem;
-          font-family: $font-aside;
-          color: $color-aside-dark;
-
-          input[type="number"], select
-          {
-            width: 100%;
-            height: 40px;
-            box-shadow: 0 3px 6px rgba($color-primary, 0.29);
-            border: 1px solid $color-primary;
-            border-radius: 6px;
-            padding: 10px 20px;
-            font-size: 0.8rem;
-            color: $color-aside-dark;
-            background: $color-deep-light;
-            box-sizing: border-box;
-
-            cursor: pointer;
-          }
-
-          select{
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            background: none;
-            z-index: 2;
-
-            &::-ms-expand {
-              display: none;
-            }
-
-            &:focus
-            {
-              outline: none;
-            }
-          }
-        }
-
-        .select::before
-        {
-          content: "";
-          display: block;
-          height: 20px;
-          width: 20px;
-          position: absolute;
-          background: url("../image/ArrowDown.svg") no-repeat center/cover;
-          transform: rotate(180deg);
-
-        }
-
-        .checkbox
-        {
-          display: inline-block;
-        }
-
+        cursor: pointer;
       }
     }
 
-    .calculator-boxes-box-left
+    .checkbox
     {
-      margin: 10px;
+      display: inline-block;
+    }
+  }
+}
 
-      .calculator-boxes-box-left-components
-      {
-        display: flex;
-        flex-direction: column;
+.calculator-boxes-box-right-dropdown
+{
+  width: 100%;
+  height: 40px;
+  box-shadow: 0 3px 6px rgba($color-primary, 0.29);
+  border: 1px solid $color-primary;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  color: $color-aside-dark;
+  background: $color-deep-light;
+  font-family: $font-aside;
+  margin-bottom: 20px;
 
-        .component
-        {
-          @include font-component;
-          width: 100%;
-          height: 31px;
-          background: $color-tertiary;
-          margin-bottom: 10px;
+  button
+  {
+    height: 20px;
+    width: 20px;
+    background: url("../image/ArrowDown.svg") no-repeat center/cover;
+    position: absolute;
+    transition: 0.7s;
 
-          span:last-child
-          {
-            font-size: 1.1rem;
-          }
-        }
-
-        span:last-child
-        {
-          font-weight: 600;
-        }
-
-        .calculator-boxes-box-left-components-total
-        {
-          @include font-component;
-          width: 50%;
-          height: 38px;
-          background: $color-primary;
-          align-self: flex-end;
-          margin-top: 10px;
-
-          span:last-child
-          {
-            font-size: 1.25rem;
-          }
-        }
-      }
-
-
+    &:hover
+    {
+      cursor: pointer;
     }
   }
 
+  .rotate-btn
+  {
+    transform: rotate(180deg);
+  }
 
+  .calculator-boxes-box-right-dropdown-list
+  {
+    display: none;
+    width: calc(100% + 42px);
+    height: 105px;
+    margin-top: 20px;
+    border: 1px solid $color-secondary;
+    border-radius: 6px;
+    margin-left: -21px;
+    background: $color-deep-light;
+    position: relative;
+    z-index: 2;
+    padding: 11px 20px;
+    color: $color-deep-dark;
+
+    li
+    {
+      margin: 7px;
+
+      &:hover
+      {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .visible-dropdown-list
+  {
+    display: block;
+    transition: 1s;
+  }
 }
 
+.calculator-boxes-box-left
+{
+  margin: 10px;
 
+  .calculator-boxes-box-left-components
+  {
+    display: flex;
+    flex-direction: column;
 
+    .component
+    {
+      @include font-component;
+      width: 100%;
+      height: 31px;
+      background: $color-tertiary;
+      margin-bottom: 10px;
+
+      span:last-child
+      {
+        font-size: 1.1rem;
+      }
+    }
+
+    span:last-child
+    {
+      font-weight: 600;
+    }
+
+    .calculator-boxes-box-left-components-total
+    {
+      @include font-component;
+      width: 50%;
+      height: 38px;
+      background: $color-primary;
+      align-self: flex-end;
+      margin-top: 10px;
+
+      span:last-child
+      {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
 
 
 @media (max-width: 800px)
@@ -185,7 +215,6 @@
       width: 90%;
       height: 50%;
 
-
       .calculator-boxes-box-left-components
       {
         width: 100%;
@@ -202,7 +231,7 @@
         justify-content: center;
       }
 
-      .select::before
+      button
       {
         right: 7%;
       }
@@ -233,7 +262,6 @@
       {
         width: 80%;
         height: 100%;
-
       }
     }
 
@@ -243,14 +271,13 @@
       align-items: flex-start;
       justify-content: center;
 
-
       label
       {
         width: 100%;
         justify-content: flex-start;
       }
 
-      .select::before
+      button
       {
         left: 39%;
       }
