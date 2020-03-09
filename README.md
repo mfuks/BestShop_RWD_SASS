@@ -18,5 +18,9 @@ RWD Workshop - landing page website template
 
 ![](demo/mobile-demo.gif)
 
+### Calculator Demo
+
+![](demo/calculator-demo.gif)
+
 ### Preview:
 https://mfuks.github.io/BestShop_RWD_SASS/
