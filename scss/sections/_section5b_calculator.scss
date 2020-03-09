@@ -70,7 +70,6 @@
         color: $color-aside-dark;
         background: $color-deep-light;
         box-sizing: border-box;
-
         cursor: pointer;
       }
     }
@@ -145,7 +144,6 @@
   .visible-dropdown-list
   {
     display: block;
-    transition: 1s;
   }
 }
 
@@ -289,4 +287,9 @@
       }
     }
   }
+}
+
+.none
+{
+  display: none;
 }

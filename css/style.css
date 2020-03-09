@@ -218,7 +218,7 @@ h1 a {
     font-weight: 700;
     text-decoration: none; }
 
-@media (max-width: 720px) {
+@media (max-width: 800px) {
   .banner {
     margin: 180px 0 0 0;
     background-size: 1000px; }
@@ -232,7 +232,7 @@ h1 a {
           text-align: center;
           padding: 25px 0; } }
 
-@media (min-width: 721px) {
+@media (min-width: 801px) {
   .banner {
     margin: 138px 0 0 0;
     height: calc(100vh - 137px); }
@@ -553,6 +553,24 @@ h1 a {
   display: flex;
   justify-content: center;
   align-items: center; }
+  .pricing .pricing-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .pricing .pricing-bottom .pricing-bottom-button {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 1rem;
+      height: 4.2rem;
+      border-radius: calc(4.2rem / 2);
+      background: #fb3b64;
+      background: -moz-linear-gradient(left, #fb3b64 0%, #08a6e4 50%, #55dfb4 100%);
+      background: -webkit-gradient(left top, right top, color-stop(0%, #fb3b64), color-stop(50%, #08a6e4), color-stop(100%, #55dfb4));
+      background: -webkit-linear-gradient(left, #fb3b64 0%, #08a6e4 50%, #55dfb4 100%);
+      background: -o-linear-gradient(left, #fb3b64 0%, #08a6e4 50%, #55dfb4 100%);
+      background: -ms-linear-gradient(left, #fb3b64 0%, #08a6e4 50%, #55dfb4 100%);
+      background: linear-gradient(to right, #fb3b64 0%, #08a6e4 50%, #55dfb4 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fb3b64', endColorstr='#55dfb4', GradientType=1 ); }
   .pricing h2 {
     text-align: center;
     display: flex;
@@ -643,7 +661,9 @@ h1 a {
 
 @media (max-width: 800px) {
   .pricing {
-    padding-bottom: 0; }
+    padding-bottom: 50px; }
+    .pricing .pricing-bottom-button {
+      width: 80%; }
     .pricing h2 {
       padding-bottom: 30px; }
     .pricing .pricing-packages-boxes {
@@ -661,7 +681,9 @@ h1 a {
 
 @media (min-width: 801px) {
   .pricing {
-    padding-bottom: 95px; }
+    padding-bottom: 70px; }
+    .pricing .pricing-bottom-button {
+      width: 300px; }
     .pricing h2 {
       padding-bottom: 50px; }
     .pricing .pricing-package {
@@ -676,7 +698,8 @@ h1 a {
 .questions {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-top: 20px; }
   .questions .questions-box {
     display: flex;
     margin: auto; }
@@ -833,8 +856,7 @@ h1 a {
       .calculator-boxes-box-right-dropdown .calculator-boxes-box-right-dropdown-list li:hover {
         cursor: pointer; }
   .calculator-boxes-box-right-dropdown .visible-dropdown-list {
-    display: block;
-    transition: 1s; }
+    display: block; }
 
 .calculator-boxes-box-left {
   margin: 10px; }
@@ -934,6 +956,9 @@ h1 a {
         justify-content: flex-start; }
       .calculator-boxes-box form button {
         left: 39%; } }
+
+.none {
+  display: none; }
 
 .footer {
   height: 90px;

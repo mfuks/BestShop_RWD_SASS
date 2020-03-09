@@ -1,5 +1,22 @@
 $(function () {
 
+    const $calculatorBtn = document.querySelector(".pricing-bottom-button");
+    const $calculator = document.querySelector(".calculator");
+    const $icon = $calculatorBtn.querySelectorAll(".far");
+
+    $calculator.classList.add("none");
+
+    $calculatorBtn.addEventListener("click", function (e)
+    {
+        e.preventDefault();
+        $calculator.classList.toggle("none");
+        for (let i = 0; i < $icon.length; i++)
+        {
+            $icon[i].classList.toggle("fa-arrow-alt-circle-down");
+            $icon[i].classList.toggle("fa-arrow-alt-circle-up");
+        }
+    });
+
     const $dropdownList = document.querySelector(".calculator-boxes-box-right-dropdown-list");
     const $dropdownBtn = document.querySelector(".calculator-boxes-box-right-dropdown-btn");
     const $dropdownSpan = document.querySelector(".calculator-boxes-box-right-dropdown-span");
@@ -31,7 +48,7 @@ $(function () {
     let $totalPrice = ($productTotalPrice + $orderTotalPrice + $packageTotalPrice +
                         $accountingTotalPrice + $terminalTotalPrice);
 
-    let $component = document.querySelectorAll(".component");
+    const $component = document.querySelectorAll(".component");
 
     for (let i = 0; i < $component.length; i++)
     {
