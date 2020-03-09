@@ -859,6 +859,8 @@ h1 a {
       margin-bottom: 10px; }
       .calculator-boxes-box-left .calculator-boxes-box-left-components .component span:last-child {
         font-size: 1.1rem; }
+    .calculator-boxes-box-left .calculator-boxes-box-left-components .component-hidden {
+      visibility: hidden; }
     .calculator-boxes-box-left .calculator-boxes-box-left-components span:last-child {
       font-weight: 600; }
     .calculator-boxes-box-left .calculator-boxes-box-left-components .calculator-boxes-box-left-components-total {

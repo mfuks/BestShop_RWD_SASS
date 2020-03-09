@@ -31,6 +31,13 @@ $(function () {
     let $totalPrice = ($productTotalPrice + $orderTotalPrice + $packageTotalPrice +
                         $accountingTotalPrice + $terminalTotalPrice);
 
+    let $component = document.querySelectorAll(".component");
+
+    for (let i = 0; i < $component.length; i++)
+    {
+        $component[i].classList.add("component-hidden");
+    }
+
     $dropdownBtn.addEventListener("click", function(e)
     {
      e.preventDefault();
@@ -46,6 +53,7 @@ $(function () {
             $productsOutput.querySelectorAll("span")[0].innerText = "Products";
             $productsOutput.querySelectorAll("span")[1].innerText = e.target.value + " * $" + $productPartPrice;
             $productsOutput.querySelectorAll("span")[2].innerText = "$" + $productTotalPrice;
+            $component[0].classList.remove("component-hidden");
         }
         else
         {
@@ -53,6 +61,7 @@ $(function () {
             $productsOutput.querySelectorAll("span")[0].innerText = "";
             $productsOutput.querySelectorAll("span")[1].innerText = "";
             $productsOutput.querySelectorAll("span")[2].innerText = "";
+            $component[0].classList.add("component-hidden");
         }
 
      $totalPrice = ($productTotalPrice + $orderTotalPrice + $packageTotalPrice +
@@ -68,6 +77,7 @@ $(function () {
             $ordersOutput.querySelectorAll("span")[0].innerText = "Orders";
             $ordersOutput.querySelectorAll("span")[1].innerText = e.target.value + " * $" + $orderPartPrice;
             $ordersOutput.querySelectorAll("span")[2].innerText = "$" + $orderTotalPrice;
+            $component[1].classList.remove("component-hidden");
         }
         else
         {
@@ -75,6 +85,7 @@ $(function () {
             $ordersOutput.querySelectorAll("span")[0].innerText = "";
             $ordersOutput.querySelectorAll("span")[1].innerText = "";
             $ordersOutput.querySelectorAll("span")[2].innerText = "";
+            $component[1].classList.add("component-hidden");
         }
 
      $totalPrice = ($productTotalPrice + $orderTotalPrice + $packageTotalPrice +
@@ -92,22 +103,25 @@ $(function () {
 
              if(e.target === $dropdownLiList[0])
              {
-                 $packageOutput.querySelectorAll("span")[2].innerText = $price[0].innerText;
+                 $packageOutput.querySelectorAll("span")[2].innerText = $packagePrice[0].innerText;
                  $packageTotalPrice = parseInt($packagePrice[0].innerText.
                                       substr(1, $packagePrice[0].innerText.length));
+                 $component[2].classList.remove("component-hidden");
              }
              else if (e.target === $dropdownLiList[1])
              {
-                 $packageOutput.querySelectorAll("span")[2].innerText = $price[1].innerText;
+                 $packageOutput.querySelectorAll("span")[2].innerText = $packagePrice[1].innerText;
                  $packageTotalPrice = parseInt($packagePrice[1].innerText.
                                       substr(1, $packagePrice[1].innerText.length));
+                 $component[2].classList.remove("component-hidden");
              }
              else if (e.target === $dropdownLiList[2])
              {
-                 $packageOutput.querySelectorAll("span")[2].innerText = $price[2].innerText;
+                 $packageOutput.querySelectorAll("span")[2].innerText = $packagePrice[2].innerText;
 
                  $packageTotalPrice = parseInt($packagePrice[2].innerText.
                                       substr(1, $packagePrice[2].innerText.length));
+                 $component[2].classList.remove("component-hidden");
              }
 
              $totalPrice = ($productTotalPrice + $orderTotalPrice + $packageTotalPrice +
@@ -124,12 +138,14 @@ $(function () {
             $accountingTotalPrice = 35;
             $accountingOutput.querySelectorAll("span")[0].innerText = "Accounting";
             $accountingOutput.querySelectorAll("span")[1].innerText = "$" + $accountingTotalPrice;
+            $component[3].classList.remove("component-hidden");
         }
         else
         {
             $accountingTotalPrice = 0;
             $accountingOutput.querySelectorAll("span")[0].innerText = "";
             $accountingOutput.querySelectorAll("span")[1].innerText = "";
+            $component[3].classList.add("component-hidden");
         }
 
         $totalPrice = $productTotalPrice + $orderTotalPrice + $packageTotalPrice + $accountingTotalPrice + $terminalTotalPrice;
@@ -143,12 +159,14 @@ $(function () {
             $terminalTotalPrice = 5;
             $terminalOutput.querySelectorAll("span")[0].innerText = "Terminal";
             $terminalOutput.querySelectorAll("span")[1].innerText = "$" + $terminalTotalPrice;
+            $component[4].classList.remove("component-hidden");
         }
         else
         {
             $terminalTotalPrice = 0;
             $terminalOutput.querySelectorAll("span")[0].innerText = "";
             $terminalOutput.querySelectorAll("span")[1].innerText = "";
+            $component[4].classList.add("component-hidden");
         }
 
         $totalPrice = $productTotalPrice + $orderTotalPrice + $packageTotalPrice +

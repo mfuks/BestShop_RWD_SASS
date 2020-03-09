@@ -97,13 +97,6 @@
   font-family: $font-aside;
   margin-bottom: 20px;
 
-  //.visible-span:after
-  //{
-  //  content: "Choose package";
-  //  display: inline-block;
-  //  position: absolute;
-  //}
-
   button
   {
     height: 20px;
@@ -178,6 +171,12 @@
         font-size: 1.1rem;
       }
     }
+
+    .component-hidden
+    {
+      visibility: hidden;
+    }
+
 
     span:last-child
     {
